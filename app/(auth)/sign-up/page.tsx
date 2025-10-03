@@ -4,12 +4,12 @@ import {useForm} from "react-hook-form";
 import {Button} from "@/components/ui/button";
 import InputField from "@/components/forms/InputField";
 import SelectField from "@/components/forms/SelectField";
-import {INVESTMENT_GOALS, PREFERRED_INDUSTRIES, RISK_TOLERANCE_OPTIONS} from "@/lib/Constant";
+import {INVESTMENT_GOALS, PREFERRED_INDUSTRIES, RISK_TOLERANCE_OPTIONS} from "@/lib/constants";
 import {CountrySelectField} from "@/components/forms/CountrySelectField";
 import FooterLink from "@/components/forms/FooterLink";
-// import {signUpWithEmail} from "@/lib/actions/auth.actions";
+import {signUpWithEmail} from "@/lib/actions/auth.actions";
 import {useRouter} from "next/navigation";
-// import {toast} from "sonner";
+import {toast} from "sonner";
 
 const SignUp = () => {
     const router = useRouter()
@@ -124,5 +124,3 @@ const SignUp = () => {
     )
 }
 export default SignUp;
-
-
