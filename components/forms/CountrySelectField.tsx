@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
-import Flag from 'react-world-flags';
+
 import { useState } from 'react';
 import { Control, Controller, FieldError } from 'react-hook-form';
 import {
@@ -62,7 +62,7 @@ const CountrySelect = ({
                 >
                     {value ? (
                         <span className='flex items-center gap-2'>
-              <Flag code={value} style={{ width: 20, height: 15 }} />
+              <span>{getFlagEmoji(value)}</span>
               <span>{countries.find((c) => c.value === value)?.label}</span>
             </span>
                     ) : (
@@ -102,7 +102,7 @@ const CountrySelect = ({
                                         )}
                                     />
                                     <span className='flex items-center gap-2'>
-              <Flag code={country.value} style={{ width: 20, height: 15 }} />
+                    <span>{getFlagEmoji(country.value)}</span>
                     <span>{country.label}</span>
                   </span>
                                 </CommandItem>
